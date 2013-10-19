@@ -11,7 +11,7 @@ var express = require ('express')
 mongoose.connect ('mongodb://localhost/tiro');
 var app = express ();
 app.use (express.bodyParser ());
-app.set ('port', 8080);
+app.set ('port', config.port);
 app.set ('views', __dirname + '/views');
 app.set ('view engine', 'jade');
 app.engine ('.jade', require ('jade').__express);
