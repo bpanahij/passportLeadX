@@ -37,22 +37,12 @@ block content
             .container.clearfix
                 a.down-button(href='#')
                     i.icon-angle-down
-                .one-third.column
-                    .logo
-                        a(href='/#/schools')
-                            img(src='images/assets/passportedu-bw.png', alt='Invention - Creative Responsive Theme')
                 .two-thirds.column
                     nav#menu.navigation(role='navigation')
                         a(href='#') Show navigation
                         ul#nav
-                            li#homeNav
-                                a(href='/#/') Home
                             li#findSchoolsNav.active
-                                a(href='/#/schools') Find Schools
-                            li#myAppNav
-                                a(href='/#/student/application') My Application
-                            li#blogNav
-                                a(href='/#/blog') Blog
+                                a(href='/#/schools') Leads
                             li#loginNav
                                 a(href='/#/signin') Login
                                 ul
@@ -61,32 +51,3 @@ block content
                                     li#logoutNav
                                         a(ng-click='logout()') Logout
     div(ng-view)
-    footer.hidden
-        .footer-top
-            .container.clearfix
-                .one-third.column.widget
-                    h3.title About
-                    h3.title FAQ
-                    h3.title Info For Schools
-                    h3.title Contact Us
-                .two-third.column.widget
-                    .subscribe
-                        h3.title Start Your Application
-                        p
-                            | Start and save your academic application today
-                            | to get more matches to schools you'll love.
-                        form(action='#')
-                            input.mail(type='text', value='your@email.com', onblur='if(this.value == \'\') { this.value = \'your@email.com\'; }', onfocus='if(this.value == \'your@email.com\') { this.value = \'\'; }')
-                            input.submit(type='submit', value='Subscribe')
-            .footer-down
-                .container.clearfix
-                    .eight.columns
-                        span.copyright
-                            | © 2013
-                            a(href='index.html')  PassportEDU. All Rights Reserved.
-                    .eight.columns
-                        .social
-                            a(href='#')
-                                i.social_icon-twitter.s-14
-                            a(href='#')
-                                i.social_icon-facebook.s-18
