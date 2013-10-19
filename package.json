@@ -1,0 +1,27 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "test": "supervisor server.js",
+    "start": "node server.js",
+    "daemon": "forever server.js"
+  },
+  "dependencies": {
+    "amazon-ses": "0.0.x",
+    "async": "0.2.x",
+    "bcrypt": "0.7.x",
+    "cheerio": "0.12.x",
+    "crypto": "*",
+    "ejs": "0.8.x",
+    "express": "3.3.x",
+    "html": "0.0.x",
+    "jade": "0.32.x",
+    "lazy": "1.0.x",
+    "less-middleware": "0.1.x",
+    "mongoose": "3.7.x",
+    "request": "2.22.x",
+    "underscore": "1.4.x",
+    "winston": "*"
+  }
+}

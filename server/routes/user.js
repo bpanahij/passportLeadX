@@ -1,4 +1,4 @@
-var UserModel = require('../models/User')
+var UserModel = require('../models/UserModel')
   , crypto = require('crypto')
   , _ = require('underscore');
 exports.login = function(req, res)

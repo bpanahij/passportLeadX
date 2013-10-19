@@ -36,15 +36,15 @@ UserSchema.pre('save', function(next)
     });
   });
 });
-UserSchema.methods.comparePassword = function(password, cb)
+UserSchema.methods.comparePassword = function(password, callback)
 {
   bcrypt.compare(password, this.password, function(err, isMatch)
   {
     if (err)
     {
-      return cb(err);
+      return callback(err);
     }
-    cb(null, isMatch);
+    callback(null, isMatch);
   });
 };
 UserSchema.static('login', function(credentials, callback)
