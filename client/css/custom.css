@@ -1,0 +1,205 @@
+/*
+* Theme Name: Invention
+* Theme URI: http://www.jozoor.com
+* Description: Invention Theme for corporate and creative sites, responsive and clean layout, more than color skins
+* Author: Jozoor team
+* Author URI: http://www.jozoor.com
+* Version: 1.0
+*/
+
+/*
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =  
+=     00   00 00 00   00 00 00   00 00 00   00 00 00   00 00    =
+=     00   00    00        00    00    00   00    00   00       =
+=     00   00    00      00      00    00   00    00   00       =
+=     00   00    00    00        00    00   00    00   00       =
+=  00 00   00 00 00   00 00 00   00 00 00   00 00 00   00       =
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+*/
+
+/* Custom CSS Code 
+=================================================*/
+
+/* this logo width & height , you can change it depend on your logo */
+.logo img {
+    width: 171px;
+}
+
+.schoolIcons {
+    padding: inherit;
+    position: absolute;
+    right: 15px;
+    top: -4px;
+}
+
+.schoolIcons i {
+    color: #000000;
+}
+
+.schoolIcons i:hover {
+    color: #009dff;
+}
+
+.searchSchoolName {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+}
+
+.schoolBookmark {
+    color: #e7402f !important;
+    text-shadow: 0 0 10px black !important;
+}
+
+.schoolApplied {
+    color: white !important;
+    text-shadow: 0 0 10px black !important;
+}
+
+.applyNow {
+    background: #FBFBFB;
+    width: 159px;
+    position: fixed;
+    top: 180px;
+    z-index: 9999;
+    left: 0px;
+    border-radius: 0 4px 4px 0;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-box-shadow: 0px 0px 20px 0px black;
+    box-shadow: 0px 0px 20px 0px black;
+}
+
+.applyNow h2 {
+    background: #4b4c4d;
+    color: #FFFFFF;
+    padding: 0;
+    font-size: 15px;
+    padding: 5px 0 6px 15px;
+    line-height: 30px;
+}
+
+.applyNow p {
+    margin: 20px;
+    margin-bottom: 0px;
+}
+
+.applyNow button {
+    margin: 20px;
+}
+
+.applicationOverlay {
+    position: absolute;
+    top: -200px;
+    left: 20px;
+    right: 20px;
+    padding:20px;
+    box-shadow: 0px 0px 20px 3px #000000;
+    z-index: 100;
+}
+
+.appSec.In {
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 0.6s;
+}
+
+.appSec.Out {
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-delay: 0s;
+}
+
+
+.page-title {
+    padding: 35px 0px 0px 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.contactNow {
+    background: #FBFBFB;
+    position: absolute;
+    top: -1000px;
+    right: 20px;
+    z-index: 9999;
+    border-radius: 0 4px 4px 0;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-box-shadow: 0px 0px 20px 0px black;
+    box-shadow: 0px 0px 20px 0px black;
+}
+
+.contactNowButton {
+    width: 100%;
+    background-color: #E7402F !important;
+}
+
+.sidebar .widget {
+    margin-bottom: 20px;
+    margin-right: 0px;
+    margin-left: 60px;
+}
+
+.alertLayer {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 100000;
+}
+
+.shadowAlert {
+    box-shadow: 0 0 40px -10px black;
+    border: 1px solid lightcoral;
+}
+
+.schoolItem {
+    border: 0px solid black;
+    box-shadow: 0 0 15px -3px black;
+}
+
+.schoolItem h2 {
+    color: white;
+    text-shadow: 0 0 3px black;
+}
+
+.schoolTilesContainer {
+}
+
+.schoolTile {
+    padding: 10px;
+    border: 0px solid black;
+    box-shadow: 0px 0px 40px 1px black;
+}
+.editSchoolTile {
+    border: 5px dotted lightsteelblue;
+}
+.schoolTileContent {
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    top: 0px;
+    left: 0px;
+    background: none;
+    height: 100%;
+    width: 100%;
+    background: #EFEFEF;
+}
+
+.schoolTileContent div {
+    padding: 20px;
+}
+
+.qrcode {
+    z-index: 100;
+    box-shadow: 0px 0px 10px 3px black;
+    position: absolute;
+    top: 0px;
+    left: 100px;
+}
+
+.page-title {
+    margin-bottom: 0px !important;
+    padding-bottom: 20px !important;
+}
+.logo img {
+    margin-bottom: -60px;
+    width: 300px;
+}

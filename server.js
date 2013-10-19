@@ -2,7 +2,7 @@
  * Module dependencies.
  */
 var express = require('express')
-  , routes = require('./routes')
+  , routes = require('./server/routes')
   , http = require('http')
   , path = require('path')
   , mongoose = require('mongoose')
@@ -22,8 +22,8 @@ app.use(express.cookieParser('your secret here'));
 app.use(express.cookieSession({secret: 'Passport Lead X', cookie: {path: '/', httpOnly: false, maxAge: null}}));
 app.use(express.session());
 app.use(app.router);
-app.use(require('less-middleware')({ src: __dirname + '../client' }));
-app.use(express.static(path.join(__dirname, '../client')));
+app.use(require('less-middleware')({ src: __dirname + '/client' }));
+app.use(express.static(path.join(__dirname, '/client')));
 //app.all ('*', auth ());
 app.get('/', routes.index);
 //API endpoints

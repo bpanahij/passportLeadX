@@ -1,7 +1,7 @@
 var UserModel = require('../models/UserModel')
   , crypto = require('crypto')
   , _ = require('underscore');
-exports = function(app)
+module.exports = function(app)
 {
   /**
    * Save a user
