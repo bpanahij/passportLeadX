@@ -4,20 +4,32 @@ var Passport = angular.module('Passport', [
     '$routeProvider', '$rootScopeProvider', function($routeProvider)
     {
       'use strict';
-      $routeProvider.when('/', {
-        templateUrl: '/app/partials/landing.html',
-        controller: 'LandingCtrl'
-      }).when('/admin', {
-          templateUrl: '/app/partials/admin.html',
-          controller: 'AdminCtrl'
-        }).when('/dropbox', {
-          templateUrl: '/app/partials/dropbox.html',
-          controller: 'DropBoxCtrl'
+      $routeProvider.when('/login', {
+        templateUrl: '/app/partials/login.html',
+        controller: 'LoginCtrl'
+      }).when('/admin/events', {
+          templateUrl: '/app/partials/admin/events.html',
+          controller: 'EventsCtrl'
+        }).when('/admin/event/:eventId', {
+          templateUrl: '/app/partials/admin/event.html',
+          controller: 'EventCtrl'
+        }).when('/event/:eventId', {
+          templateUrl: '/app/partials/eventQR.html',
+          controller: 'EventQRCtrl'
         }).when('/:shortURL', {
-          templateUrl: '/app/partials/lead.html',
+          templateUrl: '/app/partials/lead/lead.html',
           controller: 'LeadCtrl'
+        }).when('/admin/event/:eventId/DropBox', {
+          templateUrl: '/app/partials/admin/DropBox.html',
+          controller: 'DropBoxCtrl'
+        }).when('/lead/:leadId/DropBox', {
+          templateUrl: '/app/partials/lead/DropBox.html',
+          controller: 'MyDropBoxCtrl'
+        }).when('/lead/:leadId/confirmation', {
+          templateUrl: '/app/partials/lead/confirmation.html',
+          controller: 'ConfirmationCtrl'
         }).otherwise({
-          redirectTo: '/'
+          redirectTo: '/login'
         });
     }
   ]).run(['$rootScope', function($rootScope)
