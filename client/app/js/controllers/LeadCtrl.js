@@ -2,7 +2,6 @@ angular.module('Passport.controllers').controller('LeadCtrl', [
   '$scope', '$rootScope', '$location', '$routeParams', 'ArkService', 'EventService', function($scope, $rootScope, $location, $routeParams, ArkService, EventService)
   {
     "use strict";
-    $('.main-header').hide();
     $scope.lead = {
       email: ''
     }

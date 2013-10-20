@@ -4,16 +4,7 @@ var Passport = angular.module('Passport', [
     '$routeProvider', '$rootScopeProvider', function($routeProvider)
     {
       'use strict';
-      $routeProvider.when('/route', {
-        templateUrl: '/app/partials/login.html',
-        controller: 'RouteCtrl'
-      }).when('/login', {
-          templateUrl: '/app/partials/login.html',
-          controller: 'LoginCtrl'
-        }).when('/register', {
-          templateUrl: '/app/partials/register.html',
-          controller: 'RegisterCtrl'
-        }).when('/admin/events', {
+      $routeProvider.when('/admin/events', {
           templateUrl: '/app/partials/admin/events.html',
           controller: 'EventsCtrl'
         }).when('/admin/event/:eventId', {
@@ -25,12 +16,6 @@ var Passport = angular.module('Passport', [
         }).when('/:eventId', {
           templateUrl: '/app/partials/lead/lead.html',
           controller: 'LeadCtrl'
-        }).when('/admin/event/:eventId/DropBox', {
-          templateUrl: '/app/partials/admin/DropBox.html',
-          controller: 'DropBoxCtrl'
-        }).when('/lead/:leadId/DropBox', {
-          templateUrl: '/app/partials/lead/MyDropBox.html',
-          controller: 'MyDropBoxCtrl'
         }).when('/lead/confirmation', {
           templateUrl: '/app/partials/lead/confirmation.html',
           controller: 'ConfirmationCtrl'
