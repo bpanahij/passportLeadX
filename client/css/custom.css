@@ -212,6 +212,12 @@
     color: white;
 }
 
+.fieldIcon {
+    float: right;
+    font-size: 25px;
+    padding: 2px;
+}
+
 .leadCheckedField {
     min-width: 75% !important;
 }
@@ -223,6 +229,7 @@
 .green {
     color: green;
 }
+
 .red {
     color: #e7402f;
 }
