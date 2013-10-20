@@ -90,4 +90,8 @@ angular.module('Passport.controllers').controller('LeadCtrl', [
         field.value = '';
       }
     };
+    $scope.submit = function()
+    {
+      $location.path('/lead/confirmation');
+    };
   }]);

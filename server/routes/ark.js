@@ -5,7 +5,9 @@
 var request = require('request')
   , _ = require('underscore')
   , async = require('async')
-  , natural = require('natural');
+  , natural = require('natural')
+  , config = require('../../config');
+
 module.exports = function(app)
 {
   app.get('/ark/:email', function(req, res)
@@ -24,12 +26,13 @@ var arkify = function(email, fields, callback)
     {
       url: 'https://testapi.ark.com/email/' + email,
       headers: {
-        api_token: '36fa0a25-699c-40e9-b789-b28d26191ac2'
+        api_token: config.arkAPIKey
       }
     },
     function(err, response, body)
     {
       var data = JSON.parse(body);
+      console.log(data);
       var funcArray = [];
       _.each(data.links, function(link)
       {
@@ -50,7 +53,7 @@ var linkFunction = function(fields, link, callback)
     {
       url: 'https://testapi.ark.com/network/' + link.network_id + ':' + link.profile_id,
       headers: {
-        api_token: '36fa0a25-699c-40e9-b789-b28d26191ac2'
+        api_token: config.arkAPIKey
       }
     },
     function(err, response, body)
@@ -95,14 +98,12 @@ var scan = function(k, obj, call)
     {
       if (obj.hasOwnProperty(k))
       {
-        //recursive call to scan property
         scan(k, obj[k], call);
       }
     }
   }
   else
   {
-    //not an Object so obj[k] here is a value
     call(k, obj);
   }
 };

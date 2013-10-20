@@ -16,7 +16,7 @@ var Passport = angular.module('Passport', [
         }).when('/admin/:adminId/events', {
           templateUrl: '/app/partials/admin/events.html',
           controller: 'EventsCtrl'
-        }).when('/admin/event/:eventId', {
+        }).when('/admin/event', {
           templateUrl: '/app/partials/admin/event.html',
           controller: 'EventCtrl'
         }).when('/admin/event/:eventId/preview', {
@@ -34,7 +34,7 @@ var Passport = angular.module('Passport', [
         }).when('/lead/:leadId/DropBox', {
           templateUrl: '/app/partials/lead/MyDropBox.html',
           controller: 'MyDropBoxCtrl'
-        }).when('/lead/:leadId/confirmation', {
+        }).when('/lead/confirmation', {
           templateUrl: '/app/partials/lead/confirmation.html',
           controller: 'ConfirmationCtrl'
         }).otherwise({

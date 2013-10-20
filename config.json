@@ -1,4 +1,5 @@
 {
   "server": "http://leadx.psprt.com",
-  "port": 8080
+  "port": 8080,
+  "arkAPIKey": "36fa0a25-699c-40e9-b789-b28d26191ac2"
 }
