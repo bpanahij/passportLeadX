@@ -13,14 +13,14 @@
 
       <div ng-repeat="field in event.fields">
         <input ng-model="field.placeholder" ng-class="{validEmail: field.accepted}" type="{{field.type}}" placeholder="{{field.placeholder}}" class="leadField leadCheckedField">
-        <i ng-click="verifyField()" class="icon-large icon-minus-sign red fieldIcon"></i>
+        <i ng-click="removeField()" class="icon-large icon-minus-sign red fieldIcon"></i>
       </div>
       <div id="divider" class="bottom-1 clearfix"></div>
       <h3 ng-show="lead.additional.length">Additional Fields</h3>
 
       <div ng-repeat="field in event.additional">
         <input ng-model="field.placeholder" ng-class="{validEmail: field.accepted}" type="{{field.type}}" placeholder="{{field.placeholder}}" class="leadField leadCheckedField">
-        <i ng-click="verifyField()" class="icon-large icon-minus-sign red fieldIcon"></i>
+        <i ng-click="removeAdditional()" class="icon-large icon-minus-sign red fieldIcon"></i>
       </div>
       <div class="bottom-1 clearfix"></div>
       <i ng-click="addField()" class="icon-plus-sign" style="font-size: 30px;"> Add Field</i>
@@ -32,8 +32,7 @@
 </div>
 <div class="container">
   <div class="sixteen columns">
-    <button class="button small color">Save</button>
     <button ng-click="togglePreview()" class="button small color">Preview</button>
-    <button class="button small color">Publish</button>
+    <button ng-click="publish()" class="button small color">Publish</button>
   </div>
 </div>

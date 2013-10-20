@@ -1,5 +1,6 @@
 /**
- * Module dependencies.
+ * Server for Lead-X
+ * @type {exports|*}
  */
 var express = require('express')
   , routes = require('./server/routes')
@@ -8,8 +9,9 @@ var express = require('express')
   , mongoose = require('mongoose')
   , config = require('./config');
 var userRoutes = require('./server/routes/user')
-  , arkRoutes = require('./server/routes/ark');
-mongoose.connect('mongodb://localhost/tiro');
+  , arkRoutes = require('./server/routes/ark')
+  , eventRoutes = require('./server/routes/event');
+mongoose.connect('mongodb://localhost/passportLeadX');
 var app = express();
 app.use(express.bodyParser());
 app.set('port', config.port);
@@ -30,6 +32,7 @@ app.get('/', routes.index);
 //API endpoints
 userRoutes(app);
 arkRoutes(app);
+eventRoutes(app);
 http.createServer(app).listen(app.get('port'), function()
 {
   console.log('Express server listening on port ' + app.get('port'));

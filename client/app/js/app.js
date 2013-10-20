@@ -16,7 +16,7 @@ var Passport = angular.module('Passport', [
         }).when('/admin/:adminId/events', {
           templateUrl: '/app/partials/admin/events.html',
           controller: 'EventsCtrl'
-        }).when('/admin/event', {
+        }).when('/admin/event/:eventId', {
           templateUrl: '/app/partials/admin/event.html',
           controller: 'EventCtrl'
         }).when('/admin/event/:eventId/preview', {
