@@ -2,7 +2,6 @@ angular.module('Passport.controllers').controller('EventsCtrl', [
   '$scope', '$rootScope', '$location', '$routeParams', 'EventService', function($scope, $rootScope, $location, $routeParams, EventService)
   {
     "use strict";
-    $('.main-header').hide();
     $scope.events = [];
     EventService.query({}, function(res) {
       $scope.events = res;

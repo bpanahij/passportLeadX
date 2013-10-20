@@ -13,14 +13,14 @@ var Passport = angular.module('Passport', [
         }).when('/event/:eventId', {
           templateUrl: '/app/partials/eventQR.html',
           controller: 'EventQRCtrl'
-        }).when('/:eventId', {
+        }).when('/ev/:eventId', {
           templateUrl: '/app/partials/lead/lead.html',
           controller: 'LeadCtrl'
         }).when('/lead/confirmation', {
           templateUrl: '/app/partials/lead/confirmation.html',
           controller: 'ConfirmationCtrl'
         }).otherwise({
-          redirectTo: '/'
+          redirectTo: '/admin/events'
         });
     }
   ]).run(['$rootScope', function($rootScope)
