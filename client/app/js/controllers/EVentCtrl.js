@@ -2,7 +2,6 @@ angular.module('Passport.controllers').controller('EventCtrl', [
   '$scope', 'EventService', '$routeParams', '$location', 'ArkService', function($scope, EventService, $routeParams, $location, ArkService)
   {
     "use strict";
-    $('.main-header').hide();
     var eventId = $routeParams.eventId;
     $scope.event = {
       email: ''

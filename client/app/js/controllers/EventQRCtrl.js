@@ -17,7 +17,7 @@ angular.module('Passport.controllers').controller('EventQRCtrl', [
       var qrcodeEl = document.getElementById("qrcode");
       qrcodeEl.innerHTML = "";
       var qrcode = new QRCode(qrcodeEl, {
-        text: 'http://dev.psprt.com/#/ev/' + $scope.event.unitId + '/lead/' + $scope.event._id,
+        text: 'http://dev.psprt.com/#/ev/' + $scope.event._id,
         width: 350,
         height: 350,
         colorDark: "#000000",
