@@ -3,12 +3,18 @@ angular.module('Passport.services').factory('UserService', [
   {
     'use strict';
     var User = $resource('/user/:userId', {userId: '@id'});
-    var Login = $resource('/login/:userName/:password', {userId: '@id'});
+    var Login = $resource('/login/:userName/:password');
     var Service = {
-      login: function(userName, password)
+      user: function()
       {
-        var users = Login.query({userName:userName, password: password}, function() {
-
+        return $cookieStore.get('user');
+      },
+      login: function(userName, password, callback)
+      {
+        var user = Login.get({userName: userName, password: password}, function()
+        {
+          $cookieStore.put('user', user);
+          callback(null, user);
         });
       },
       /**

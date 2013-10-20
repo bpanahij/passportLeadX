@@ -93,7 +93,7 @@
     top: -200px;
     left: 20px;
     right: 20px;
-    padding:20px;
+    padding: 20px;
     box-shadow: 0px 0px 20px 3px #000000;
     z-index: 100;
 }
@@ -107,7 +107,6 @@
     -webkit-animation-duration: 0.5s;
     -webkit-animation-delay: 0s;
 }
-
 
 .page-title {
     padding: 35px 0px 0px 0px !important;
@@ -168,9 +167,11 @@
     border: 0px solid black;
     box-shadow: 0px 0px 40px 1px black;
 }
+
 .editSchoolTile {
     border: 5px dotted lightsteelblue;
 }
+
 .schoolTileContent {
     position: absolute;
     margin: 0px;
@@ -199,7 +200,26 @@
     margin-bottom: 0px !important;
     padding-bottom: 20px !important;
 }
+
 .logo img {
     margin-bottom: -60px;
     width: 300px;
+}
+
+.leadField {
+    float: left;
+    background: lightgray;
+    color: white;
+}
+
+.leadCheckedField {
+    min-width: 75% !important;
+}
+
+.validEmail {
+    background: #C2F7B9;
+}
+
+.green {
+    color: green;
 }

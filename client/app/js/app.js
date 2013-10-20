@@ -4,10 +4,16 @@ var Passport = angular.module('Passport', [
     '$routeProvider', '$rootScopeProvider', function($routeProvider)
     {
       'use strict';
-      $routeProvider.when('/login', {
+      $routeProvider.when('/route', {
         templateUrl: '/app/partials/login.html',
-        controller: 'LoginCtrl'
-      }).when('/admin/events', {
+        controller: 'RouteCtrl'
+      }).when('/login', {
+          templateUrl: '/app/partials/login.html',
+          controller: 'LoginCtrl'
+        }).when('/register', {
+          templateUrl: '/app/partials/register.html',
+          controller: 'RegisterCtrl'
+        }).when('/admin/:adminId/events', {
           templateUrl: '/app/partials/admin/events.html',
           controller: 'EventsCtrl'
         }).when('/admin/event/:eventId', {
@@ -32,7 +38,7 @@ var Passport = angular.module('Passport', [
           templateUrl: '/app/partials/lead/confirmation.html',
           controller: 'ConfirmationCtrl'
         }).otherwise({
-          redirectTo: '/login'
+          redirectTo: '/'
         });
     }
   ]).run(['$rootScope', function($rootScope)

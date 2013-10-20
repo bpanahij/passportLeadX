@@ -7,7 +7,8 @@ var express = require('express')
   , path = require('path')
   , mongoose = require('mongoose')
   , config = require('./config');
-var userRoutes = require('./server/routes/user');
+var userRoutes = require('./server/routes/user')
+  , arkRoutes = require('./server/routes/ark');
 mongoose.connect('mongodb://localhost/tiro');
 var app = express();
 app.use(express.bodyParser());
@@ -28,6 +29,7 @@ app.use(express.static(path.join(__dirname, '/client')));
 app.get('/', routes.index);
 //API endpoints
 userRoutes(app);
+arkRoutes(app);
 http.createServer(app).listen(app.get('port'), function()
 {
   console.log('Express server listening on port ' + app.get('port'));

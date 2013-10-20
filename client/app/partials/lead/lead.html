@@ -1,0 +1,27 @@
+<div class="page-title bottom-2">
+  <div class="container clearfix sidebar">
+    <div class="sixteen columns">
+      <h1 class="nine columns">Stay in Touch!</h1>
+    </div>
+  </div>
+</div>
+<div class=container>
+  <div class="sixteen columns">
+    <form class="form-elements">
+
+      <h4>1. Enter Email Address</h4>
+      <input ng-model="lead.email" ng-class="{validEmail: validEmail}" type="text" placeholder="Your email@address.com" class="bottom-2 leadField">
+
+      <div class="clearfix"></div>
+      <h4>2. Verify Your Information</h4>
+
+      <div ng-repeat="field in lead.fields">
+        <input ng-model="field.value" ng-class="{validEmail: field.accepted}" type="{{field.type}}" placeholder="{{field.placeholder}}" class="leadField leadCheckedField">
+        <i ng-click="verifyField()" class="icon-large" ng-class="{'icon-check-empty': !field.accepted, 'icon-check green': field.accepted}" style="float: right; font-size: 28px;"></i>
+      </div>
+      <div class="bottom-1 clearfix"></div>
+      <a type="link" href="#" ng-click="submit()" style="text-align: center; color: cornflowerblue"><h3>Submit</h3></a>
+
+    </form>
+  </div>
+</div>

@@ -8,6 +8,20 @@ module.exports = function(app)
    */
   app.post('/user/:userId', function(req, res)
   {
+    UserModel.findOneAndUpdate(req.body, function(err, user)
+    {
+      user.save(function(err)
+      {
+        if (err) console.log(err);
+        res.json(user);
+      });
+    });
+  });
+  /**
+   * Create a user
+   */
+  app.post('/user', function(req, res)
+  {
     var user = new UserModel(req.body);
     user.save(function(err)
     {
@@ -28,7 +42,7 @@ module.exports = function(app)
   /**
    * Login endpoint
    */
-  app.post('/login/:userName/:password', function(req, res)
+  app.get('/login/:userName/:password', function(req, res)
   {
     if (_.isUndefined(req.body.userName))
     {
