@@ -7,7 +7,6 @@ var request = require('request')
   , async = require('async')
   , natural = require('natural')
   , config = require('../../config');
-
 module.exports = function(app)
 {
   app.get('/ark/:email', function(req, res)
@@ -107,41 +106,3 @@ var scan = function(k, obj, call)
     call(k, obj);
   }
 };
-/**
- * "{\"message\":\"unknown profile.\"}"
- "{\"name\":\"Brian Johnson\",\"languages\":[],\"pics\":[\"//lh3.googleusercontent.com/-GUFWTtYkpVA/AAAAAAAAAAI/AAAAAAAAACA/UmBrTNNcoBM/photo.jpg\"],\"emails\":[],\"links\":[{\"name\":\"Google+\",\"link\":\"https://plus.google.com/118240164487818358893\"}],\"education\":[{\"school\":\"University of Texas at Austin\",\"major\":null,\"from\":null,\"to\":\"2000\",\"src\":\"gp/118240164487818358893\"}],\"work\":[{\"company\":\"rateGenius.com\",\"position\":\"Senior Web Developer\",\"from\":null,\"to\":null,\"src\":\"gp/118240164487818358893\"}],\"interests\":{},\"location\":\"Austin, Texas\"}"
- "{\"message\":\"unknown profile.\"}"
- "{\"name\":\"BrianJohnson\",\"sex\":\"male\",\"location\":\"Austin, Texas\",\"pics\":[\"http://graph.facebook.com/bpanahij/picture?type=large\"],\"links\":[{\"link\":\"https://www.facebook.com/bpanahij\",\"network_name\":\"Facebook\",\"profile_url\":\"https://www.facebook.com/bpanahij\",\"network_id\":\"fb\",\"profile_id\":\"bpanahij\"},{\"link\":\"https://www.facebook.com/bpanahij\",\"network_name\":\"Facebook\",\"profile_url\":\"https://www.facebook.com/bpanahij\",\"network_id\":\"fb\",\"profile_id\":\"bpanahij\"}]}"
- */
-/**
- "links": [
- {
-     "email": "brian@pjohnson.info",
- "network_id": "tw",
- "network_name": "Twitter",
- "profile_id": "code_brian",
- "profile_url": "http://twitter.com/code_brian"
- },
- {
-     "email": "brian@pjohnson.info",
- "network_id": "fb",
- "network_name": "Facebook",
- "profile_id": "bpanahij",
- "profile_url": "http://www.facebook.com/bpanahij"
- },
- {
-     "email": "brian@pjohnson.info",
- "network_id": "li",
- "network_name": "LinkedIn",
- "profile_id": "brpjohnson",
- "profile_url": "http://www.linkedin.com/in/brpjohnson"
- },
- {
-     "email": "brian@pjohnson.info",
- "network_id": "gp",
- "network_name": "Google+",
- "profile_id": "118240164487818358893",
- "profile_url": "https://plus.google.com/118240164487818358893"
- }
- ],
- */
