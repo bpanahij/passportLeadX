@@ -14,9 +14,13 @@ module.exports = function(app)
   {
     EventModel.findById(req.body._id, function(err, event)
     {
-      if (_.isUndefined(event))
+      if (_.isEmpty(event))
       {
         event = new EventModel(req.body);
+        event.save(function(err) {
+          res.json(event);
+          return;
+        });
       }
       event.update(_.omit(req.body, '_id'), {}, function(err, rawDoc) {
         console.log(err, rawDoc);

@@ -2,6 +2,9 @@
   <div class="container clearfix sidebar">
     <div class="sixteen columns">
       <h3 class="nine columns" style="text-align: center;">Create a Lead Form</h3>
+      <div class="six columns pull-right">
+        <i ng-click="newEvent()" class="icon-plus-sign pull-right" style="font-size: 20px"> New Event</i>
+      </div>
     </div>
   </div>
 </div>
@@ -9,18 +12,19 @@
   <div class="sixteen columns">
     <form class="form-elements">
       <input ng-model="event.name" type="text" placeholder="Name your event" class="text leadField" style="width: 90%; font-size: 2em;">
-      <input value="email@address.com" readonly ng-class="{validEmail: validEmail}" type="text" class="leadField leadCheckedField">
+      <input value="email@address.com" readonly ng-class="{validEmail: validEmail}" type="text" class="leadField">
 
       <div ng-repeat="field in event.fields">
-        <input ng-model="field.placeholder" ng-class="{validEmail: field.accepted}" type="{{field.type}}" placeholder="{{field.placeholder}}" class="leadField leadCheckedField">
-        <i ng-click="removeField()" class="icon-large icon-minus-sign red fieldIcon"></i>
+        <input ng-model="field.placeholder" ng-class="{validEmail: field.accepted}" type="{{field.type}}" placeholder="{{field.placeholder}}" class="leadField">
+        <!--<i ng-click="removeField()" class="icon-large icon-minus-sign red fieldIcon"></i>-->
       </div>
       <div id="divider" class="bottom-1 clearfix"></div>
       <h3 ng-show="lead.additional.length">Additional Fields</h3>
 
       <div ng-repeat="field in event.additional">
-        <input ng-model="field.placeholder" ng-class="{validEmail: field.accepted}" type="{{field.type}}" placeholder="{{field.placeholder}}" class="leadField leadCheckedField">
+        <input ng-model="field.placeholder" type="{{field.type}}" class="leadField leadCheckedField">
         <i ng-click="removeAdditional()" class="icon-large icon-minus-sign red fieldIcon"></i>
+        <input ng-model="field.tags" ng-keyup="handleKeywords()" type="{{field.type}}" class="leadCheckedField">
       </div>
       <div class="bottom-1 clearfix"></div>
       <i ng-click="addField()" class="icon-plus-sign" style="font-size: 30px;"> Add Field</i>

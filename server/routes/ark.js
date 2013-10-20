@@ -31,7 +31,6 @@ var arkify = function(email, fields, callback)
     function(err, response, body)
     {
       var data = JSON.parse(body);
-      console.log(data);
       var funcArray = [];
       _.each(data.links, function(link)
       {
