@@ -59,7 +59,6 @@ angular.module('Passport.controllers').controller('EventCtrl', [
       var tags = $(event.target).val();
       var keywords = tags.split(' ');
       this.field.keywords = keywords;
-      console.log(this.event);
     };
     $scope.togglePreview = function()
     {
