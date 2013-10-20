@@ -18,7 +18,7 @@ var Passport = angular.module('Passport', [
           controller: 'EventsCtrl'
         }).when('/admin/event/:eventId', {
           templateUrl: '/app/partials/admin/event.html',
-          controller: 'EventCtrl'
+          controller: 'EVentCtrl'
         }).when('/event/:eventId', {
           templateUrl: '/app/partials/eventQR.html',
           controller: 'EventQRCtrl'
