@@ -22,6 +22,7 @@
     "mongoose": "3.7.x",
     "request": "2.22.x",
     "underscore": "1.4.x",
-    "winston": "*"
+    "winston": "*",
+    "natrural": "*"
   }
 }

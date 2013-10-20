@@ -1,0 +1,35 @@
+<div class="page-title bottom-2">
+  <div class="container clearfix sidebar">
+    <div class="sixteen columns">
+      <h3 class="nine columns" style="text-align: center;">My Events</h3>
+
+      <div class="six columns pull-right">
+        <i ng-click="newEvent()" class="icon-plus-sign pull-right" style="font-size: 20px"> New Event</i>
+      </div>
+    </div>
+  </div>
+</div>
+<div ng-show="!preview" class="container">
+  <table class="table style">
+    <thead>
+    <tr>
+      <th>
+        Name
+      </th>
+      <th>
+        Page
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="event in events">
+      <td>
+        <a ng-href="/#/admin/event/{{event._id}}" ng-bind="event.name"></a>
+      </td>
+      <td>
+        <button ng-click="viewPage()" class="button small color">view</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

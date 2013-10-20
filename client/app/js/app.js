@@ -13,15 +13,12 @@ var Passport = angular.module('Passport', [
         }).when('/register', {
           templateUrl: '/app/partials/register.html',
           controller: 'RegisterCtrl'
-        }).when('/admin/:adminId/events', {
+        }).when('/admin/events', {
           templateUrl: '/app/partials/admin/events.html',
           controller: 'EventsCtrl'
         }).when('/admin/event/:eventId', {
           templateUrl: '/app/partials/admin/event.html',
           controller: 'EventCtrl'
-        }).when('/admin/event/:eventId/preview', {
-          templateUrl: '/app/partials/admin/eventPreview.html',
-          controller: 'EventPreviewCtrl'
         }).when('/event/:eventId', {
           templateUrl: '/app/partials/eventQR.html',
           controller: 'EventQRCtrl'
