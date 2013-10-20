@@ -9,6 +9,10 @@ angular.module('Passport.controllers').controller('LeadCtrl', [
     EventService.get({_id: $scope.eventId}, function(event)
     {
       $scope.lead = event;
+      _.each($scope.lead.additional, function(field)
+      {
+        $scope.lead.fields.push(field);
+      });
     });
     $scope.$watch('lead.email', function(newEmail)
     {
@@ -19,10 +23,13 @@ angular.module('Passport.controllers').controller('LeadCtrl', [
         {
           return field.keywords;
         });
-        ArkService.arkIt(newEmail, fields, function(err, data) {
-          _.each($scope.lead.fields, function(field) {
+        ArkService.arkIt(newEmail, fields, function(err, data)
+        {
+          _.each($scope.lead.fields, function(field)
+          {
             field.foundValue = false;
-            _.each(data, function(d) {
+            _.each(data, function(d)
+            {
               var intersection = _.intersection(_.keys(d), field.keywords)
               if (intersection.length > 0)
               {
@@ -32,7 +39,9 @@ angular.module('Passport.controllers').controller('LeadCtrl', [
             });
           });
         });
-      } else {
+      }
+      else
+      {
         $scope.validEmail = false;
       }
     });
