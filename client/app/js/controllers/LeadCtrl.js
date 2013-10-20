@@ -1,60 +1,16 @@
 angular.module('Passport.controllers').controller('LeadCtrl', [
-  '$scope', '$rootScope', '$location', '$routeParams', 'ArkService', function($scope, $rootScope, $location, $routeParams, ArkService)
+  '$scope', '$rootScope', '$location', '$routeParams', 'ArkService', 'EventService', function($scope, $rootScope, $location, $routeParams, ArkService, EventService)
   {
     "use strict";
     $('.main-header').hide();
     $scope.lead = {
       email: ''
     }
-    $scope.lead.fields = [
-      {
-        keywords: [
-          'name',
-          'fullName'
-        ],
-        placeholder: 'Your Full Name',
-        type: 'text',
-        accepted: false
-      },
-      {
-        keywords: [
-          'phone',
-          'mobile'
-        ],
-        placeholder: 'Phone',
-        type: 'text',
-        accepted: false
-      },
-      {
-        keywords: [
-          'birth',
-          'DOB',
-          'birthday'
-          ],
-        placeholder: 'Month / Day / Year of Birth',
-        type: 'text',
-        accepted: false
-      },
-      {
-        keywords: [
-          'location',
-          'address'
-          ],
-        placeholder: 'Mailing Address',
-        type: 'text',
-        accepted: false
-      },
-      {
-        keywords: [
-          'school',
-          'university',
-          'education'
-          ],
-        placeholder: 'Last School Attended',
-        type: 'text',
-        accepted: false
-      }
-    ];
+    $scope.eventId = $routeParams.eventId;
+    EventService.get({_id: $scope.eventId}, function(event)
+    {
+      $scope.lead = event;
+    });
     $scope.$watch('lead.email', function(newEmail)
     {
       if (newEmail && newEmail.match(/.*@.*\.(com|info|net|org|edu)/))

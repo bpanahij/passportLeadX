@@ -22,7 +22,7 @@ var Passport = angular.module('Passport', [
         }).when('/event/:eventId', {
           templateUrl: '/app/partials/eventQR.html',
           controller: 'EventQRCtrl'
-        }).when('/:shortURL', {
+        }).when('/:eventId', {
           templateUrl: '/app/partials/lead/lead.html',
           controller: 'LeadCtrl'
         }).when('/admin/event/:eventId/DropBox', {
