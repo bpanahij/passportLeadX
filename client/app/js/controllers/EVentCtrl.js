@@ -6,6 +6,7 @@ angular.module('Passport.controllers').controller('EventCtrl', [
     $scope.event = {
       email: ''
     };
+    $scope.publishLabel = 'Preview';
     if (eventId != 0)
     {
       $scope.event._id = eventId;
@@ -63,6 +64,7 @@ angular.module('Passport.controllers').controller('EventCtrl', [
     $scope.togglePreview = function()
     {
       $scope.preview = !$scope.preview;
+      $scope.publishLabel = $scope.preview ? 'Edit' : 'Preview';
       $scope.lead = {
         fields: []
       };
